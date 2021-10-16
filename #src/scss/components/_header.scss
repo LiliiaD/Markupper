@@ -1,0 +1,44 @@
+.header {
+    max-width: 1600px;
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $main-color;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    &__item {
+        margin-left: 30px;
+        color: $white;
+        font-size: 18px;
+    }
+    &__arrow {
+        margin-left: 6px;
+    }
+    &__link_btn {
+        display: inline-block;
+        width: 102px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid $line-color;
+        border-radius: 3px;
+        font-weight: 900;
+    }
+    &__item_registration {
+        color: $mirage;
+    }
+    &__item_login {
+        margin-left: 50px;
+    }
+    &__item_registration {
+        margin-left: 10px;
+        background-color: $white;
+        border-radius: 3px;
+    }
+    
+}

@@ -1,0 +1,46 @@
+.section_main {
+    background: $main-color;
+    position: relative;
+    margin-bottom: 250px;
+    &::after {
+        @include pseudo;
+        width: 2630px;
+        height: 380px;
+        overflow: hidden;
+        border-radius: 50%;
+        background: $main-color;
+        bottom: -40px;
+        right: -590px;
+        z-index: -1;
+    }
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 95px 0;
+    &__title {
+        width: 50%;
+        color: $white;
+        h1 {
+            font-size: 80px;
+            line-height: 96px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 22px;
+            line-height: 33px;
+            margin-bottom: 40px;
+        }
+        .btn {
+            @include btn(228px);
+            svg{
+                @include btn-svg;
+            }
+        }    
+    }
+    &__pic {
+        width: 50%;
+        padding-left: 40px;
+    }
+}

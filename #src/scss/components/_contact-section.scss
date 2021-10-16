@@ -1,0 +1,110 @@
+.position {
+    position: relative;
+    height: 734px;
+
+}
+.contact {
+    width: 100%;
+    min-height: 714px;
+    position: absolute;
+    top: -40px;
+    border-radius: 20px;
+    background: url('..//img/pages/bg.png') center no-repeat;
+    padding: 110px;
+    display: flex;
+    color: $white;
+    &__form {
+        width: 75%;
+        padding-right: 100px;
+        font-weight: 900;
+        h2 {
+            font-size: 50px;
+            line-height: 60px;
+        }
+        .form {
+            margin-top: 60px;
+            &__info {
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+                &__item {
+                    margin-right: 20px;
+                }
+            }
+            &__label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            &__input {
+                display: block;
+                border: none;
+                margin-bottom: 40px;
+                width: 300px;
+                height: 30px;
+                background: $main-color;
+                border-bottom: 1px solid $white;
+                &_wide {
+                    width: 620px;
+                    height: 65px;
+                }
+            }
+            .btn {
+                display: block;
+                border: none;
+                @include btn(179px);
+                svg{
+                    @include btn-svg;
+                }     
+            } 
+        }
+    }
+    &__info {
+        &__img {
+            margin-bottom: 40px;
+        }
+        &__mail {
+            margin-bottom: 30px;
+            h3 {
+                font-size: 12px;
+                line-height: 18px;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+            }
+            .mail {
+                font-size: 18px;
+                line-height: 27px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
+                width: 189px;
+            }    
+        }
+        &__hours {
+            margin-bottom: 40px;
+            h3 {
+                font-size: 12px;
+                line-height: 18px;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+            }
+            .hours {
+                font-size: 18px;
+                line-height: 27px;
+            }
+        }
+        &__social {
+            display: flex;
+            .social__item{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: $white;
+                margin-right: 10px;
+                padding: 10px 0 0 10px;
+            }
+        }
+    }
+}
+
+
+
+
+    
