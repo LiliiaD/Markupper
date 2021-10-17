@@ -2,11 +2,48 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 150px;
+    @include mq(tablet-wide, max) {
+        margin-bottom: 100px;
+    }
+    @include mq(tablet, max) {
+        margin-bottom: 80px;
+    }
+    @include mq(phone, max) {
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
     &__img {
-        padding-right: 40px;
+        padding-right: 20px;
+        @include mq(phone, max) {
+            padding-right: 0;
+            margin-bottom: 30px;
+        }
+        img {
+            @include mq(tablet-wide, max) {
+                width: 471px;
+                height: 380px;
+            }
+            @include mq(tablet, max) {
+                width: 354px;
+                height: 286px;
+            }
+            @include mq(phone, max) {
+                width: 335px;
+                height: 270px;
+            }
+        }
     }
     &__text {
-        padding-left: 110px;
+        padding-left: 130px;
+        @include mq(tablet-wide, max) {
+            padding-left: 105px;
+        }
+        @include mq(tablet, max) {
+            padding-left: 20px;
+        }
+        @include mq(phone, max) {
+            padding-left: 0;
+        }
         &_number{
             color: $main-color;
             font-weight: 900;
@@ -14,17 +51,43 @@
             line-height: 72px;
             margin-bottom: 80px;
             border-bottom: 1px solid $line-color;
+            @include mq(tablet, max) {
+                font-size: 40px;
+                line-height: 48px;
+                margin-bottom: 40px;
+            }
+            @include mq(phone, max) {
+                display: none;
+            }
         }
         &_title {
             font-weight: 900;
             font-size: 50px;
             line-height: 60px;
             margin-bottom: 20px;
+            @include mq(tablet, max) {
+                font-size: 32px;
+                line-height: 38px;
+                margin-bottom: 15px;
+            }
+            @include mq(phone, max) {
+                font-size: 26px;
+                line-height: 31px;
+                margin-bottom: 10px;
+            }
         }
         &_description {
             font-size: 22px;
             line-height: 33px;
             color: $gray;
+            @include mq(tablet, max) {
+                font-size: 18px;
+                line-height: 27px;
+            }
+            @include mq(phone, max) {
+                font-size: 16px;
+                line-height: 24px;
+            }
         }
     }
 }
@@ -33,10 +96,13 @@
         display: flex;
         flex-direction: row-reverse;
         &__img {
-            padding: 0 0 0 40px;
+            padding: 0 0 0 20px;
         }
         &__text {
             padding: 0 130px 0 0;
+            @include mq(phone, max) {
+                padding: 0;
+            }
         }
     } 
 }

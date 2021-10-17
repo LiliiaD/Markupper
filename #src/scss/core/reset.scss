@@ -15,7 +15,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: 'Circular Std', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -25,6 +25,13 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+}
+body, html {
+	width: 100%;
+	overflow-x: hidden;
+}
+input:active, input:focus {
+	outline: none;
 }
 ol, ul {
 	list-style: none;

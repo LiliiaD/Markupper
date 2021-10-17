@@ -1,6 +1,15 @@
 .position {
     position: relative;
     height: 734px;
+    @include mq(tablet-wide, max) {
+        height: 693px;
+    }
+    @include mq(tablet, max) {
+        height: 704px;
+    }
+    @include mq(phone, max) {
+        height: 1052px;
+    }
 
 }
 .contact {
@@ -10,23 +19,73 @@
     top: -40px;
     border-radius: 20px;
     background: url('..//img/pages/bg.png') center no-repeat;
-    padding: 110px;
+    padding: 100px 110px;
     display: flex;
     color: $white;
+    @include mq(tablet-wide, max) {
+        min-height: 702px;
+        top: -90px;
+        padding: 85px 100px;
+    }
+    @include mq(tablet, max) {
+        min-height: 728px;
+        top: -70px;
+        padding: 60px;
+    }
+    @include mq(phone, max) {
+        min-height: 1050px;
+        top: -70px;
+        padding: 40px 20px;
+        flex-wrap: wrap;
+        background-size: cover;
+    }
     &__form {
-        width: 75%;
-        padding-right: 100px;
+        width: 72%;
+        padding-right: 150px;
         font-weight: 900;
+        @include mq(tablet-wide, max) {
+            padding-right: 125px;
+        }
+        @include mq(tablet, max) {
+            padding-right: 58px;
+        }
+        @include mq(phone, max) {
+            padding-right: 0;
+            width: 100%;
+        }
         h2 {
             font-size: 50px;
             line-height: 60px;
+            @include mq(tablet-wide, max) {
+                font-size: 40px;
+                line-height: 48px;
+            } 
+            @include mq(tablet, max) {
+                font-size: 32px;
+                line-height: 38px;
+            }
+            @include mq(phone, max) {
+                font-size: 26px;
+                line-height: 31px;
+            }
         }
         .form {
             margin-top: 60px;
+            text-transform: uppercase;
+            @include mq(tablet, max) {
+                margin-top: 50px;
+            }
+            @include mq(phone, max) {
+                margin-top: 30px;
+            }
             &__info {
                 display: flex;
                 justify-content: space-between;
                 width: 50%;
+                @include mq(tablet, max) {
+                    display: block;
+                    width: 100%;
+                }
                 &__item {
                     margin-right: 20px;
                 }
@@ -34,6 +93,8 @@
             &__label {
                 display: block;
                 margin-bottom: 5px;
+                font-size: 14px;
+                line-height: 18px;
             }
             &__input {
                 display: block;
@@ -43,27 +104,67 @@
                 height: 30px;
                 background: $main-color;
                 border-bottom: 1px solid $white;
+                @include mq(tablet-wide, max) {
+                    width: 226px;
+                }
+                @include mq(tablet, max) {
+                    width: 294px;
+                }
+                @include mq(phone, max) {
+                    width: 100%;
+                }
                 &_wide {
                     width: 620px;
                     height: 65px;
+                    @include mq(tablet-wide, max) {
+                        width: 472px;
+                    }
                 }
             }
             .btn {
                 display: block;
                 border: none;
                 @include btn(179px);
+                @include mq(phone, max) {
+                    @include btn(153px);
+                    font-size: 14px;
+                    height: 50px;
+                    line-height: 50px;
+                }
                 svg{
                     @include btn-svg;
+                    @include mq(phone, max) {
+                        width: 9px;
+                        height: 9px;
+                    }
                 }     
             } 
         }
     }
     &__info {
+        padding-left: 10px;
+        @include mq(tablet, max) {
+            padding-left: 15px;
+            padding-top: 88px;
+        }
+        @include mq(phone, max) {
+            padding-left: 0;
+            padding-top: 72px;
+        }
         &__img {
             margin-bottom: 40px;
+            svg {
+                @include mq(tablet, max) {
+                    width: 100px;
+                    height: 102px;
+                }
+            }
         }
         &__mail {
             margin-bottom: 30px;
+            @include mq(phone, max) {
+                margin-bottom: 20px;
+            }
             h3 {
                 font-size: 12px;
                 line-height: 18px;
@@ -75,10 +176,21 @@
                 line-height: 27px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
                 width: 189px;
+                @include mq(tablet, max) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                @include mq(phone, max) {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
             }    
         }
         &__hours {
             margin-bottom: 40px;
+            @include mq(phone, max) {
+                margin-bottom: 30px;
+            }
             h3 {
                 font-size: 12px;
                 line-height: 18px;
@@ -88,6 +200,14 @@
             .hours {
                 font-size: 18px;
                 line-height: 27px;
+                @include mq(tablet, max) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                @include mq(phone, max) {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
             }
         }
         &__social {

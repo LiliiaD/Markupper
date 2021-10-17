@@ -1,58 +1,139 @@
 .section__text {
     background: #1A2B6B;
-    padding: 120px 0 170px 0;
+    padding: 120px 0 220px 0;
     color: $white;
     position: relative;
+    @include mq(tablet-wide, max) {
+        padding-top: 90px;
+    }
+    @include mq(phone, max) {
+        padding-top: 60px;
+    }
     &::before {
         @include pseudo;
         width: 100%;
-        min-width: 2630px;
         height: 380px;
         border-radius: 50%;
         background: #1A2B6B;
-        top: -40px;
-        right: -590px;
+        top: 160px;
+        right: 0;
         overflow: hidden;
+        transform: scale(2.1);
         z-index: -1;
+        @include mq(phone, max) {
+            border-radius: 43%;
+        }
     }
 }
 .text {
     display: flex;
     justify-content: space-between;
+    @include mq(phone, max) {
+        flex-wrap: wrap;
+    }
     &__description {
         width: 50%;
         padding-right: 20px;
+        @include mq(tablet-wide, max) {
+            padding-right: 0;
+        }
+        @include mq(phone, max) {
+            width: 100%;
+        }
         h2 {
             font-weight: 900;
             font-size: 50px;
             line-height: 60px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            @include mq(tablet-wide, max) {
+                font-size: 40px;
+                line-height: 48px;
+            }
+            @include mq(tablet, max) {
+                font-size: 32px;
+                line-height: 38px;
+                margin-bottom: 20px;
+            }
+            @include mq(phone, max) {
+                font-size: 26px;
+                line-height: 31px;
+            }
         }
         p {
             font-size: 18px;
             line-height: 27px;
             margin-bottom: 40px;
+            @include mq(tablet, max) {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 30px;
+            }
+            @include mq(phone, max) {
+                font-size: 14px;
+                line-height: 21px;
+            }
         }
         .btn {
             @include btn(228px);
+            @include mq(phone, max) {
+                @include btn(202px);
+                font-size: 14px;
+                margin-bottom: 60px;
+                height: 50px;
+                line-height: 50px;
+            }
             svg{
                 @include btn-svg;
+                @include mq(phone, max) {
+                    width: 9px;
+                    height: 9px;
+                }
             }
         }    
     }
     &__info {
-        padding-left: 20px;
+        padding-left: 90px;
         position: relative;
+        @include mq(tablet-wide, max) {
+            padding-left: 40px;
+        }
+        @include mq(tablet, max) {
+            padding-left: 20px;
+        }
+        @include mq(phone, max) {
+            padding-left: 0;
+        }
         &__cover {
             width: 550px;
             height: 332px;
-            padding: 75px 50px;
+            padding: 95px 50px;
             background: #375BD2;
             border-radius: 20px;
             position: relative;
+            @include mq(tablet-wide, max) {
+                width: 473px;
+                padding: 76px 50px;
+            }
+            @include mq(tablet, max) {
+                width: 353px;
+                height: 332px;
+            }
+            @include mq(phone, max) {
+                width: 335px;
+                height: 227px;
+                padding: 65px 25px;
+            }
             p {
                 font-size: 24px;
                 line-height: 36px;
+                @include mq(tablet, max) {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                @include mq(phone, max) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
             &::after {
                 content: '';
@@ -66,6 +147,20 @@
                 opacity: 0.1;
                 border-radius: 20px;
                 transform: rotate(-7.24deg);
+                @include mq(tablet-wide, max) {
+                width: 498px; 
+                right: 0;              
+                }
+                @include mq(tablet, max) {
+                    width: 401px; 
+                    right: 0;              
+                }
+                @include mq(phone, max) {
+                    width: 355px; 
+                    height: 221px;
+                    right: -10px;
+                    bottom: 1px;
+                }
             }
 
         }
@@ -73,7 +168,23 @@
             content: '';
             position: absolute;
             right: 0;
-            bottom: -10px;
+            top: 245px;
+            @include mq(tablet, max) {
+                top: 275px;             
+            }
+            @include mq(phone, max) {
+                top: 170px;             
+            }
+            svg {
+                @include mq(tablet, max) {
+                    width: 171px;
+                    height: 145px;             
+                }
+                @include mq(phone, max) {
+                    width: 140px;
+                    height: 119px;             
+                }
+            }
         }
     }
 }

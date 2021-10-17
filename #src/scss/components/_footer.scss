@@ -1,54 +1,125 @@
 .footer { 
     &__up {
-        outline: 1px solid $line-color;
+        border-bottom: 1px solid $line-color;
         position: relative;
     }
-}
-.wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-.up {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 83px;
-    color: $mirage; 
-    .menu {
+    .up {
         display: flex;
-        font-size: 18px;
-        &__item {
+        justify-content: space-between;
+        align-items: center;
+        height: 83px;
+        color: $mirage; 
+        @include mq(tablet, max) {
+            height: 71px;
+            justify-content: center;
+        }
+        @include mq(phone, max) {
+            height: 100%;
+        }
+        .menu {
+            display: flex;
+            font-size: 18px;
+            @include mq(tablet, max) {
+                font-size: 16px;
+            }
+            @include mq(phone, max) {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                text-align: center;
+            }
+            &__item {
             margin-right: 35px;
+            @include mq(phone, max) {
+                margin-right: 0;
+                width: 50%;
+                margin-bottom: 20px;
+            }
+            }
         }
-    }
-    .icons {
-        &__item {
-            display: inline-block;
-            margin-left: 21px;
+        &__circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid $line-color;
+            position: fixed;
+            right: 1%;
+            bottom: 45px;
+            padding: 13px;
+            @include mq(tablet-wide, max) {
+                bottom: 10px;
+                right: 45%;
+            }
+            @include mq(tablet, max) {
+                bottom: 30px;
+                right: 20px;
+            }
+            @include mq(phone, max) {
+                bottom: 0;
+                right: 43%;
+            }
         }
-    }
-    &__circle {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 1px solid $line-color;
-        position: absolute;
-        right: 30px;
-        top: 70%;
-        padding: 13px;
     }
 }
+
 .down {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 68px;
     font-size: 14px;
+    position: relative;
+    @include mq(tablet-wide, max) {
+        margin-bottom: 79px;
+    }
+    @include mq(tablet, max) {
+        display: block;
+    }
+    @include mq(phone, max) {
+        margin-bottom: 117px;
+    }
+    &__text {
+        @include mq(tablet, max) {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
     .info {
         display: flex;
         color: $gray;
+        @include mq(tablet, max) {
+            padding-top: 15px;
+            justify-content: center;
+        }
         &__item {
             margin-left: 25px;
+            @include mq(tablet, max) {
+                margin-left: 15px;
+            }
         }
     }
+    .icons {
+        position: absolute;
+        right: 0;
+        bottom: 93px;
+        @include mq(tablet-wide, max) {
+            right: 20px;
+        }
+        @include mq(tablet, max) {
+            position: relative;
+            bottom: 0;
+            padding: 30px 0;
+            left: 33%;
+        }
+        @include mq(phone, max) {
+            left: 15%;
+        }
+        &__item {
+            display: inline-block;
+            margin-left: 21px;
+            @include mq(tablet, max) {
+                margin-left: 40px;
+            }
+        }
+    } 
 }
+  

@@ -1,7 +1,7 @@
 @mixin font($font_name, $file_name, $weight, $style) {
     @font-face {
         font-family: $font_name;
-        src: url("../fonts/#{$file_name}.ttf");
+        src: url("../fonts/#{$file_name}.woff");
         font-weight: #{$weight};
         font-style: #{$style};
     }
@@ -59,7 +59,7 @@
 }
 
 $breakpoints: (
-    "phone":        400px,
+    "phone":        375px,
     "phone-wide":   480px,
     "phablet":      560px,
     "tablet-small": 640px,
