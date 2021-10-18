@@ -241,8 +241,8 @@ a {
 }
 
 .nav__btn:hover {
-  -webkit-box-shadow: 2px 2px 3px #E5E5E5;
-          box-shadow: 2px 2px 3px #E5E5E5;
+  -webkit-box-shadow: 3px 3px 3px #FFFFFF;
+          box-shadow: 3px 3px 3px #FFFFFF;
 }
 
 .section_main {
