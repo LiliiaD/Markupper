@@ -104,6 +104,9 @@
                     height: 9px;
                 }
             }
+            &:hover {
+                box-shadow: 3px 3px 5px #3c7509;
+            }
         }
     }
 }

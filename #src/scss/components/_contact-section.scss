@@ -25,12 +25,14 @@
     @include mq(tablet-wide, max) {
         min-height: 702px;
         top: -90px;
+        background-position: center right -120px;
         padding: 85px 100px;
     }
     @include mq(tablet, max) {
         min-height: 728px;
         top: -70px;
         padding: 60px;
+        
     }
     @include mq(phone, max) {
         min-height: 1050px;
@@ -87,7 +89,11 @@
                     width: 100%;
                 }
                 &__item {
-                    margin-right: 20px;
+                    margin-right: 20px; 
+                    margin-bottom: 40px;
+                    @include mq(tablet, max) {
+                        margin-bottom: 30px;
+                    }
                 }
             }
             &__label {
@@ -99,7 +105,6 @@
             &__input {
                 display: block;
                 border: none;
-                margin-bottom: 40px;
                 width: 300px;
                 height: 30px;
                 background: $main-color;
@@ -121,15 +126,27 @@
                     }
                 }
             }
+            .error {
+                display: block;
+                color: #ff0000;
+                font-size: 12px;
+                font-weight: normal;
+                margin-top: 5px;
+                @include mq(phone, max) {
+                    font-size: 10px;
+                }
+            }
             .btn {
                 display: block;
                 border: none;
+                margin-top: 40px;
                 @include btn(179px);
                 @include mq(phone, max) {
                     @include btn(153px);
                     font-size: 14px;
                     height: 50px;
                     line-height: 50px;
+                    margin-top: 30px;
                 }
                 svg{
                     @include btn-svg;
@@ -137,6 +154,9 @@
                         width: 9px;
                         height: 9px;
                     }
+                }
+                &:hover {
+                    box-shadow: 3px 3px 5px #3c7509;
                 }     
             } 
         }

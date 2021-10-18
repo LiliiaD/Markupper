@@ -51,6 +51,7 @@
             line-height: 72px;
             margin-bottom: 80px;
             border-bottom: 1px solid $line-color;
+            position: relative;
             @include mq(tablet, max) {
                 font-size: 40px;
                 line-height: 48px;
@@ -106,3 +107,11 @@
         }
     } 
 }
+
+/*&::after {
+    @include pseudo;
+    height: 30px;
+    width: 100%;
+    background-color: $bg-gray;
+    top: 45px;
+}*/

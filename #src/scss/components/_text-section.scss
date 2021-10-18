@@ -20,6 +20,10 @@
         overflow: hidden;
         transform: scale(2.1);
         z-index: -1;
+        @include mq(tablet, max) {
+            transform: scale(1.9);
+            top: 115px;
+        }
         @include mq(phone, max) {
             border-radius: 43%;
         }
@@ -88,6 +92,9 @@
                     width: 9px;
                     height: 9px;
                 }
+            }
+            &:hover {
+                box-shadow: 3px 3px 5px #3c7509;
             }
         }    
     }

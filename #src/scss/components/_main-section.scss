@@ -99,7 +99,10 @@
                     height: 9px;
                 }
             }
-        }    
+            &:hover {
+                box-shadow: 2px 2px 3px $bg-gray;
+            }
+        }   
     }
     &__pic {
         padding-left: 20px;

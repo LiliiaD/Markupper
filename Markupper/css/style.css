@@ -234,6 +234,17 @@ a {
   margin-left: 50px;
 }
 
+.nav__btn {
+  -webkit-transition: 0.5ss;
+  -o-transition: 0.5ss;
+  transition: 0.5ss;
+}
+
+.nav__btn:hover {
+  -webkit-box-shadow: 2px 2px 3px #E5E5E5;
+          box-shadow: 2px 2px 3px #E5E5E5;
+}
+
 .section_main {
   background: #375BD2;
   position: relative;
@@ -307,6 +318,11 @@ a {
   top: 16px;
 }
 
+.main__title .btn:hover {
+  -webkit-box-shadow: 2px 2px 3px #E5E5E5;
+          box-shadow: 2px 2px 3px #E5E5E5;
+}
+
 .main__pic {
   padding-left: 20px;
 }
@@ -340,6 +356,7 @@ a {
   line-height: 72px;
   margin-bottom: 80px;
   border-bottom: 1px solid #D4DBEA;
+  position: relative;
 }
 
 .group__text_title {
@@ -372,6 +389,14 @@ a {
 .section__group:nth-child(even) .group__text {
   padding: 0 130px 0 0;
 }
+
+/*&::after {
+    @include pseudo;
+    height: 30px;
+    width: 100%;
+    background-color: $bg-gray;
+    top: 45px;
+}*/
 
 .section__join {
   padding-top: 30px;
@@ -445,6 +470,11 @@ a {
   top: 16px;
 }
 
+.join__description .btn:hover {
+  -webkit-box-shadow: 3px 3px 5px #3c7509;
+          box-shadow: 3px 3px 5px #3c7509;
+}
+
 .section__text {
   background: #1A2B6B;
   padding: 120px 0 220px 0;
@@ -515,6 +545,11 @@ a {
   position: absolute;
   right: 16px;
   top: 16px;
+}
+
+.text__description .btn:hover {
+  -webkit-box-shadow: 3px 3px 5px #3c7509;
+          box-shadow: 3px 3px 5px #3c7509;
 }
 
 .text__info {
@@ -606,6 +641,7 @@ a {
 
 .contact__form .form__info__item {
   margin-right: 20px;
+  margin-bottom: 40px;
 }
 
 .contact__form .form__label {
@@ -618,7 +654,6 @@ a {
 .contact__form .form__input {
   display: block;
   border: none;
-  margin-bottom: 40px;
   width: 300px;
   height: 30px;
   background: #375BD2;
@@ -630,9 +665,18 @@ a {
   height: 65px;
 }
 
+.contact__form .form .error {
+  display: block;
+  color: #ff0000;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
 .contact__form .form .btn {
   display: block;
   border: none;
+  margin-top: 40px;
   width: 179px;
   height: 60px;
   background-color: #05C46B;
@@ -651,6 +695,11 @@ a {
   position: absolute;
   right: 16px;
   top: 16px;
+}
+
+.contact__form .form .btn:hover {
+  -webkit-box-shadow: 3px 3px 5px #3c7509;
+          box-shadow: 3px 3px 5px #3c7509;
 }
 
 .contact__info {
@@ -713,6 +762,7 @@ a {
 .footer__up {
   border-bottom: 1px solid #D4DBEA;
   position: relative;
+  margin-top: 40px;
 }
 
 .footer .up {
@@ -884,6 +934,7 @@ body {
   .contact {
     min-height: 702px;
     top: -90px;
+    background-position: center right -120px;
     padding: 85px 100px;
   }
 
@@ -1026,6 +1077,13 @@ body {
     line-height: 27px;
   }
 
+  .section__text::before {
+    -webkit-transform: scale(1.9);
+        -ms-transform: scale(1.9);
+            transform: scale(1.9);
+    top: 115px;
+  }
+
   .text__description h2 {
     font-size: 32px;
     line-height: 38px;
@@ -1092,6 +1150,10 @@ body {
   .contact__form .form__info {
     display: block;
     width: 100%;
+  }
+
+  .contact__form .form__info__item {
+    margin-bottom: 30px;
   }
 
   .contact__form .form__input {
@@ -1176,11 +1238,7 @@ body {
     height: 19px;
   }
 
-  .nav__item_registration {
-    display: none;
-  }
-
-  .nav__item_login {
+  .nav__btn {
     display: none;
   }
 
@@ -1443,6 +1501,10 @@ body {
     width: 100%;
   }
 
+  .contact__form .form .error {
+    font-size: 10px;
+  }
+
   .contact__form .form .btn {
     width: 153px;
     height: 60px;
@@ -1459,6 +1521,7 @@ body {
     font-size: 14px;
     height: 50px;
     line-height: 50px;
+    margin-top: 30px;
   }
 
   .contact__form .form .btn svg {

@@ -64,14 +64,18 @@
         margin-left: 10px;
         background-color: $white;
         border-radius: 3px;
+    }
+    &__item_login {
+        margin-left: 50px;
+        
+    }
+    &__btn {
+        transition: 0.5ss;
         @include mq(phone, max) {
             display: none;
         }
     }
-    &__item_login {
-        margin-left: 50px;
-        @include mq(phone, max) {
-            display: none;
-        }
+    &__btn:hover {
+        box-shadow: 2px 2px 3px $bg-gray;
     }
 }
